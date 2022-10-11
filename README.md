@@ -8,8 +8,8 @@
   - ``object``
   - array: ``string[]`` / ``number[]`` / ``boolean[]`` / ``any[]``
 - special types:
-  - Tuple -> an array of fixed length and type (see [code example 2](2-tuple))
-  - Enum -> ``{ADMIN, USER}`` (see [code example 3](3-enum))
+  - Tuple -> an array of fixed length and type (see [code example 2](#2-tuple))
+  - Enum -> ``{ADMIN, USER}`` (see [code example 3](#3-enum))
 - when declaring a ``let`` variable without value assigned to it, it is advised to add type to it, such as ``let num: number;``. However this is not a good practice when a value to the variable is assigned explicitly (such as ``const num: number = 1``), as the type gets already passed in the function parameter.
 
 ### Code Examples
