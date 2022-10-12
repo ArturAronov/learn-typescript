@@ -15,6 +15,8 @@
   - type alias ``type Combinable = number | string`` (custom type)
   - ``void``
   - ``Function`` (see [code example 6](#6.-function-type))
+  - ``unknown`` -> somewhat similar to ``any``, however the big difference between them is that variable storing ``any`` type can be reassigned to other variable containing different types, it just doesn't care. With ``unknown`` this is not possible, and therefore an extra condition with type check is required, that makes it bit more safer than ``any`` (see [code example 7](#7.-unknown-type))
+  - ``never``
 - when declaring a ``let`` variable without value assigned to it, it is advised to add type to it, such as ``let num: number;``. However this is not a good practice when a value to the variable is assigned explicitly (such as ``const num: number = 1``), as the type gets already passed in the function parameter.
 
 ### Code Examples
@@ -150,4 +152,15 @@ function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
 addAndHandle(10, 20, (result) => {
   console.log(result)
 })
+```
+
+#### 6. Unknown Type
+```
+let userInput: unknown;
+let userName: string;
+
+userInput: 'Artur';
+if (typeof userInput === 'string') {
+  userName = userInput;
+}
 ```
